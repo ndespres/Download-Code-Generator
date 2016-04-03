@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+.bubbly {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-align: justify;
+	font-size: 18px;
+	color: #333333;
+	background-color: #66CCFF;
+	padding: 1px;
+	border: thick dotted #00CCFF;
+}

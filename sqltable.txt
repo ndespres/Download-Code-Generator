@@ -1,0 +1,53 @@
+-- phpMyAdmin SQL Dump
+-- version 2.11.6
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Oct 21, 2008 at 09:06 PM
+-- Server version: 5.0.51
+-- PHP Version: 5.2.6
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Database: `codes`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `album`
+--
+
+CREATE TABLE IF NOT EXISTS `album` (
+  `downloadCode` varchar(20) NOT NULL,
+  `downloadsRemaining` int(11) NOT NULL default '3',
+  `timeCreated` timestamp NOT NULL default CURRENT_TIMESTAMP,
+  PRIMARY KEY  (`downloadCode`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `album`
+--
+
+INSERT INTO `album` (`downloadCode`, `downloadsRemaining`, `timeCreated`) VALUES
+('10IQ3S5248Z', 99, '2008-10-21 21:05:24'),
+('1102AOIXJYZ', 0, '2008-10-21 21:05:24');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `totals`
+--
+
+CREATE TABLE IF NOT EXISTS `totals` (
+  `album` text NOT NULL,
+  `downloads` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `totals`
+--
+
+INSERT INTO `totals` (`album`, `downloads`) VALUES
+('album', 12);
